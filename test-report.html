@@ -132,6 +132,11 @@
             background: #fff8f1;
         }
         
+        .test-item.missing {
+            border-left-color: #6c757d;
+            background: #f8f9fa;
+        }
+        
         .test-status {
             font-weight: bold;
             margin-right: 15px;
@@ -152,6 +157,10 @@
         
         .test-status.notfound {
             color: #fd7e14;
+        }
+        
+        .test-status.missing {
+            color: #6c757d;
         }
         
         .test-name {
@@ -204,6 +213,28 @@
             color: #667eea;
         }
         
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        table th {
+            background: #f0f0f0;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        table tr:hover {
+            background: #f8f9fa;
+        }
+        
         .footer {
             background: #f8f9fa;
             padding: 20px;
@@ -238,6 +269,30 @@
             border-radius: 3px;
             font-size: 0.8em;
             font-weight: bold;
+        }
+        
+        .badge-p1 {
+            background: #dc3545;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
+        }
+        
+        .badge-p2 {
+            background: #fd7e14;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
+        }
+        
+        .badge-p3 {
+            background: #ffc107;
+            color: #333;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
         }
     </style>
 </head>
@@ -407,6 +462,136 @@
                 </div>
             </div>
             
+            <!-- Missing Validations -->
+            <div class="section">
+                <h2>❌ Missing Validations (Future Work)</h2>
+                <p style="margin-bottom: 20px; color: #666;">
+                    The following validations were NOT performed in this assessment. They are documented for future work and require additional infrastructure or access.
+                </p>
+                
+                <table>
+                    <tr>
+                        <th>Category</th>
+                        <th>Test Type</th>
+                        <th>Effort</th>
+                        <th>Priority</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>Security</td>
+                        <td>SQL Injection Testing</td>
+                        <td>High</td>
+                        <td><span class="badge-p1">P1</span></td>
+                        <td>❌ Not Tested</td>
+                    </tr>
+                    <tr>
+                        <td>Security</td>
+                        <td>XSS/Command Injection</td>
+                        <td>High</td>
+                        <td><span class="badge-p1">P1</span></td>
+                        <td>❌ Not Tested</td>
+                    </tr>
+                    <tr>
+                        <td>Security</td>
+                        <td>JWT Expiration/Refresh</td>
+                        <td>High</td>
+                        <td><span class="badge-p2">P2</span></td>
+                        <td>❌ Not Tested</td>
+                    </tr>
+                    <tr>
+                        <td>Security</td>
+                        <td>SSRF Vulnerabilities</td>
+                        <td>High</td>
+                        <td><span class="badge-p1">P1</span></td>
+                        <td>❌ Not Tested</td>
+                    </tr>
+                    <tr>
+                        <td>Security</td>
+                        <td>Header Injection</td>
+                        <td>Medium</td>
+                        <td><span class="badge-p2">P2</span></td>
+                        <td>❌ Not Tested</td>
+                    </tr>
+                    <tr>
+                        <td>Performance</td>
+                        <td>Load Testing (30 req/min)</td>
+                        <td>Very High</td>
+                        <td><span class="badge-p2">P2</span></td>
+                        <td>❌ Not Tested</td>
+                    </tr>
+                    <tr>
+                        <td>Performance</td>
+                        <td>Stress Testing (Breaking Point)</td>
+                        <td>Very High</td>
+                        <td><span class="badge-p2">P2</span></td>
+                        <td>❌ Not Tested</td>
+                    </tr>
+                    <tr>
+                        <td>Performance</td>
+                        <td>Concurrency (100+ simultaneous)</td>
+                        <td>High</td>
+                        <td><span class="badge-p2">P2</span></td>
+                        <td>❌ Not Tested</td>
+                    </tr>
+                    <tr>
+                        <td>Performance</td>
+                        <td>P95/P99 Latency Analysis</td>
+                        <td>High</td>
+                        <td><span class="badge-p2">P2</span></td>
+                        <td>❌ Not Tested</td>
+                    </tr>
+                    <tr>
+                        <td>Reliability</td>
+                        <td>Network Fault Injection</td>
+                        <td>Very High</td>
+                        <td><span class="badge-p3">P3</span></td>
+                        <td>❌ Not Tested</td>
+                    </tr>
+                    <tr>
+                        <td>Reliability</td>
+                        <td>Retry/Circuit Breaker</td>
+                        <td>High</td>
+                        <td><span class="badge-p2">P2</span></td>
+                        <td>❌ Not Tested</td>
+                    </tr>
+                    <tr>
+                        <td>Validation</td>
+                        <td>Unicode/UTF-8 Characters</td>
+                        <td>Medium</td>
+                        <td><span class="badge-p3">P3</span></td>
+                        <td>❌ Not Tested</td>
+                    </tr>
+                    <tr>
+                        <td>Validation</td>
+                        <td>Boundary Value Testing</td>
+                        <td>Medium</td>
+                        <td><span class="badge-p2">P2</span></td>
+                        <td>❌ Not Tested</td>
+                    </tr>
+                    <tr>
+                        <td>Validation</td>
+                        <td>Large Payload Testing (>10MB)</td>
+                        <td>Medium</td>
+                        <td><span class="badge-p3">P3</span></td>
+                        <td>❌ Not Tested</td>
+                    </tr>
+                    <tr>
+                        <td>Business Logic</td>
+                        <td>Pricing Tier Differences</td>
+                        <td>High</td>
+                        <td><span class="badge-p3">P3</span></td>
+                        <td>❌ Not Tested</td>
+                    </tr>
+                    <tr>
+                        <td>Business Logic</td>
+                        <td>International Address Formats</td>
+                        <td>High</td>
+                        <td><span class="badge-p3">P3</span></td>
+                        <td>❌ Not Tested</td>
+                    </tr>
+                </table>
+            </div>
+            
             <!-- Key Findings -->
             <div class="findings">
                 <h3>📊 Key Findings</h3>
@@ -420,19 +605,19 @@
                     <strong>Error Handling:</strong> ✅ Consistent error response format with proper error codes
                 </div>
                 <div class="finding-item">
-                    <strong>Security:</strong> ✅ HTTPS enforced, ⚠️ No rate limit headers observed
+                    <strong>Security:</strong> ✅ HTTPS enforced, ⚠️ No rate limit headers observed, ⚠️ Advanced injection testing not performed
                 </div>
                 <div class="finding-item">
-                    <strong>Performance:</strong> ⏱️ Geocode: 200-300ms, Neighborhoods: 150-200ms
+                    <strong>Performance:</strong> ⏱️ Geocode: 200-300ms, Neighborhoods: 150-200ms (basic latency only)
                 </div>
                 <div class="finding-item">
                     <strong>Documentation:</strong> ❌ No OpenAPI spec found, 13 critical documentation gaps
                 </div>
                 <div class="finding-item">
-                    <strong>Test Coverage:</strong> 45% (4 working endpoints tested, 18 broken documented)
+                    <strong>Test Coverage:</strong> 45% (4 working endpoints tested, 18 broken documented, advanced validation pending)
                 </div>
                 <div class="finding-item">
-                    <strong>Confidence Level:</strong> MEDIUM (Evidence from live API calls, but many endpoints unavailable)
+                    <strong>Confidence Level:</strong> MEDIUM (Evidence from live API calls, but many endpoints unavailable, advanced testing incomplete)
                 </div>
             </div>
             
@@ -446,14 +631,66 @@
                     <strong>P1:</strong> Verify HTTP methods for 405 errors (Routing, Places, Zones, etc.)
                 </div>
                 <div class="finding-item">
-                    <strong>P2:</strong> Implement client-side rate limiting (30 req/min documented)
+                    <strong>P2:</strong> Implement client-side rate limiting (30 req/min documented) + set up load testing infrastructure
                 </div>
                 <div class="finding-item">
-                    <strong>P3:</strong> Add retry logic for 504 timeouts
+                    <strong>P3:</strong> Add retry logic for 504 timeouts + perform injection security testing
                 </div>
                 <div class="finding-item">
-                    <strong>P4:</strong> Request official OpenAPI specification from Precisely
+                    <strong>P4:</strong> Request official OpenAPI specification + perform international format testing
                 </div>
+            </div>
+            
+            <!-- Test Coverage Summary -->
+            <div class="findings" style="background: #fff8f0; border-left: 4px solid #fd7e14;">
+                <h3>📈 Test Coverage Summary</h3>
+                <table>
+                    <tr>
+                        <th>Category</th>
+                        <th>Coverage</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>Authentication</td>
+                        <td>60%</td>
+                        <td>✅ Basic + ⚠️ Missing expiration/refresh</td>
+                    </tr>
+                    <tr>
+                        <td>Endpoint Testing</td>
+                        <td>100%</td>
+                        <td>✅ All 22 endpoints tested</td>
+                    </tr>
+                    <tr>
+                        <td>Error Handling</td>
+                        <td>100%</td>
+                        <td>✅ 400, 401, 404, 405, 504 verified</td>
+                    </tr>
+                    <tr>
+                        <td>Schema Validation</td>
+                        <td>100%</td>
+                        <td>✅ Working endpoints + ❌ Error responses incomplete</td>
+                    </tr>
+                    <tr>
+                        <td>Security (OWASP)</td>
+                        <td>30%</td>
+                        <td>✅ Auth + ❌ Injection, SSRF, etc.</td>
+                    </tr>
+                    <tr>
+                        <td>Performance</td>
+                        <td>15%</td>
+                        <td>✅ Basic latency + ❌ No load/stress testing</td>
+                    </tr>
+                    <tr>
+                        <td>Reliability</td>
+                        <td>10%</td>
+                        <td>❌ No network fault injection or retry testing</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Overall</strong></td>
+                        <td><strong>45%</strong></td>
+                        <td><strong>Partial validation complete</strong></td>
+                    </tr>
+                </table>
             </div>
         </div>
         
