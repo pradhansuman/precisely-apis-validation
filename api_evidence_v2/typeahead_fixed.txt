@@ -1,0 +1,1 @@
+{"errors":[{"errorCode":"PB-14020-GEOSEARCH-0004","errorDescription":"Invalid Country Code."},{"errorCode":"PB-14020-GEOSEARCH-0005","errorDescription":"Invalid value for searchText."}]}

@@ -1,0 +1,2 @@
+{"errors":[{"errorCode":"PB-14020-GEOSEARCH-0006","errorDescription":"Either provide country or latitude/longitude."},{"errorCode":"PB-14020-GEOSEARCH-0005","errorDescription":"Invalid value for searchText."}]}
+---HTTP_CODE:400

@@ -1,0 +1,2 @@
+{"errors":[{"errorCode":"PB-14020-GEOTIME-0001","errorDescription":"Invalid or missing timestamp, it should be an integer"}]}
+400

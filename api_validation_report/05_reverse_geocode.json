@@ -1,0 +1,2 @@
+{"errors":[{"errorCode":"PB-14020-VAL-0008","errorDescription":"The request contains no points. Please resend the request with points."}]}
+---HTTP_CODE:400
